@@ -1,0 +1,20 @@
+- fields: {'no': 1, price: 16000.0, serial: 9789648996869, title: Programming in JAVA}
+  model: manager.book
+  pk: 3
+- fields: {'no': 1, price: 12000.0, serial: 9789646864726, title: Hoosh masnooee}
+  model: manager.book
+  pk: 4
+- fields: {'no': 1, price: 11500.0, serial: 9789640511572, title: Physic pishdaneshgahi}
+  model: manager.book
+  pk: 5
+- fields: {'no': 3, price: 2000.0, serial: 9789640520093, title: Diffranciel}
+  model: manager.book
+  pk: 6
+- fields: {'no': 1, price: 7000.0, serial: 9789640509517, title: Hendese Tahlili va
+      jabr khatti}
+  model: manager.book
+  pk: 7
+- fields: {'no': 1, price: 12000.0, serial: 9780521680899, title: New Insight into
+      IELTS}
+  model: manager.book
+  pk: 8

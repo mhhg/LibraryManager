@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html width="100px" style="width: 100px">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @page {
+            size: a6;
+            margin: 0cm;
+        }
+        img {
+            text-align: center;
+        }
+        th{
+            padding-top: 5px;
+        }
+        td{
+            padding-top: 5px;
+            text-align: center;
+        }
+        strong{
+            margin-right: 5px;
+        }
+        body{
+            font-size: 14px;
+        }
+        h4{
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+            padding-top: 10px;
+            margin: 5px;
+        }
+        table{
+
+            margin: 5px;
+        }
+    </style>
+</head>
+<body width="100px" style="width: 100px">
+<img src="{{ logo }}" width="226px" height="112px">
+<h4>ELA Book Factor</h4>
+<ul>
+    <li><strong>Date:</strong>{{ invoice.date }}</li>
+    <li><strong>Name:</strong>{{ invoice.buyer_first_name }} {{ invoice.buyer_last_name}}</li>
+</ul>
+{#<p>Date: {{ invoice.date }}</p>#}
+{#<p>First Name: {{ invoice.buyer_first_name }}</p>#}
+{#<p>Last Name: {{ invoice.buyer_last_name}}</p>#}
+<table>
+    <tr>
+        <th>Book</th>
+        <th>No</th>
+        <th>Fee</th>
+    </tr>
+    {% for item in invoice.items.all %}
+        <tr>
+            <td width="4.5cm">{{ item.book.title }}</td>
+            <td width="1cm">{{ item.no }}</td>
+            <td width="2cm">{{ item.book.price }} </td>
+        </tr>
+    {% endfor %}
+<tr></tr>
+    <tr>
+        <td>Total:</td>
+        <td>{{ invoice.total_no }}</td>
+        <td>{{ invoice.total_price }}</td>
+    </tr>
+</table>
+<h4>ELA Factor</h4>
+</body>
+</html>
